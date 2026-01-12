@@ -1,18 +1,27 @@
-// app/layout.tsx
-import { Cinzel, Inter } from "next/font/google";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google"; // Inter is perfect for this bold style
 import "./globals.css";
 
-const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" });
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// Load Inter with extra weights for that "Bold App" look
+const inter = Inter({ 
+  subsets: ["latin"], 
+  weight: ['400', '600', '700', '900'] 
+});
+
+export const metadata: Metadata = {
+  title: "Whisper",
+  description: "Send anonymous secrets",
+};
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={`${cinzel.variable} ${inter.variable} bg-slate-950 text-slate-200`}>
+      {/* Global Black Background */}
+      <body className={`${inter.className} bg-black text-white antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white`}>
         {children}
       </body>
     </html>
