@@ -269,8 +269,14 @@ export default function VerifyPage({ params }: { params: Promise<{ id: string }>
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-md relative"
           >
-            <div className="text-center mb-8">
-                <span className="font-bold text-2xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">whisper</span>
+<div className="text-center mb-8 flex flex-col items-center">
+                <span className="font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 leading-none">
+                    whisper
+                </span>
+                {/* Added mt-2 for distinct spacing */}
+                <span className="text-xs font-bold font-mono text-zinc-400 tracking-widest uppercase mt-2">
+                    by nahian
+                </span>
             </div>
 
             <div className="bg-zinc-900/80 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-2xl">

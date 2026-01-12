@@ -29,13 +29,24 @@ export default function LandingPage() {
         </motion.div>
 
         {/* LOGO: "whisper" */}
-        <motion.h1 
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="text-6xl md:text-7xl font-black tracking-tighter mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 drop-shadow-[0_0_15px_rgba(236,72,153,0.5)]"
-        >
-          whisper
-        </motion.h1>
+<div className="flex flex-col items-center mb-2">
+            <motion.h1 
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="text-6xl md:text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 drop-shadow-[0_0_15px_rgba(236,72,153,0.5)]"
+            >
+              whisper
+            </motion.h1>
+            {/* 👇 ADDED THIS */}
+<motion.span 
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                transition={{ delay: 0.5 }}
+                className="text-sm font-bold font-mono text-zinc-300 tracking-[0.3em] uppercase mt-2"
+            >
+                by nahian
+            </motion.span>
+        </div>
 
         <motion.p 
           initial={{ opacity: 0, y: 10 }}

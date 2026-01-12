@@ -124,9 +124,14 @@ export default function CreateSecretPage() {
         <Link href="/" className="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center hover:bg-zinc-800 transition-colors">
             <ChevronLeft size={20} className="text-white" />
         </Link>
-        <div className="flex items-center gap-2">
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+{/* 👇 UPDATED LOGO SECTION */}
+        <div className="flex flex-col items-center">
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 text-xl tracking-tight leading-none">
                 whisper
+            </span>
+            {/* Added mt-1 for spacing */}
+            <span className="text-[10px] font-bold font-mono text-zinc-400 tracking-widest uppercase mt-1">
+                by nahian
             </span>
         </div>
         <div className="w-10" /> {/* Spacer */}
