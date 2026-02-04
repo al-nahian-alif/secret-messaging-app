@@ -247,7 +247,8 @@ export default function VerifyPage({ params }: { params: Promise<{ id: string }>
 
                     <div className="mt-12">
                         <button 
-                            onClick={() => setIsBurning(true)}
+                                
+                                // onClick={() => setIsBurning(true)}
                             className="w-full py-4 bg-red-500/10 border border-red-500/20 hover:bg-red-500 hover:text-white text-red-500 font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
                         >
                             <Flame size={18} className="group-hover:animate-bounce"/> 
